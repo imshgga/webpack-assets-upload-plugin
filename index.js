@@ -37,9 +37,9 @@ class UploadPlugin {
             let buffer = Buffer.from(source)
             return sftp.put(buffer, path.resolve(remotePath, filename))
                 .then(() => {
-                  console.log(emoji.get('smiley'), chalk.green(`  文件: ${filename} 已上传至服务器下${remotePath}`))
+                  console.log(emoji.get('smiley'), chalk.green(`文件: ${filename} 已上传至服务器下${remotePath}`))
                 }).catch((err) => {
-                  console.log(emoji.get('rage'), chalk.red(`  文件 ${filename}上传失败了`))
+                  console.log(emoji.get('rage'), chalk.red(`文件 ${filename}上传失败了`))
                   console.log(err)
                 })
           })

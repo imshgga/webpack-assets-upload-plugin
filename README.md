@@ -2,6 +2,7 @@
 A webpack plugin which can help you upload boundle assets to you server by use ssh
 
 When you use `web-dev-server`, maybe you wanner do something at everytime webpack compiled,just like upload boundle assets to you server...
+
 ![webpack-assets-upload-plugin example](./asset-upload-plugin.gif)
 
 ### USAGE
