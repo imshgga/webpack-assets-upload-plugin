@@ -1,0 +1,30 @@
+{
+  "name": "webpack-assets-upload-plugin",
+  "version": "1.0.1",
+  "description": "A webpack plugin which can help you upload boundle assets to you server by use ssh",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --hot --open --inline",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imshgga/webpack-assets-upload-plugin.git"
+  },
+
+  "keywords": ["upload", "webpack-dev-server", "webpack"],
+  "author": "shgga",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "node-emoji": "^1.8.1",
+    "ssh2-sftp-client": "^2.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/imshgga/webpack-assets-upload-plugin/issues"
+  },
+  "homepage": "https://github.com/imshgga/webpack-assets-upload-plugin#readme"
+}
