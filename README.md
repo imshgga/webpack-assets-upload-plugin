@@ -10,7 +10,7 @@ When you use `web-dev-server`, maybe you wanner do something at everytime webpac
 + Install
 
   ```bash
-    npm install --save-dev webpack-asset-upload-plugin
+    npm install --save-dev webpack-assets-upload-plugin
   ```
 + Upload boundle assets to you server.
 
