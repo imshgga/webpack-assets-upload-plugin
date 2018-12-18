@@ -16,7 +16,7 @@ When you use `web-dev-server`, maybe you wanner do something at everytime webpac
 
   ```bash
     # webpack.config.js
-    const Upload = require('webpack-asset-upload-plugin')
+    const Upload = require('webpack-assets-upload-plugin')
 
     ...
     plugins: [
@@ -35,7 +35,7 @@ When you use `web-dev-server`, maybe you wanner do something at everytime webpac
 
   ```bash
     # webpack.config.js
-    const Upload = require('webpack-asset-upload-plugin')
+    const Upload = require('webpack-assets-upload-plugin')
 
     ...
     plugins: [
