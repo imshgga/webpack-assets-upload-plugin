@@ -35,7 +35,7 @@ class UploadPlugin {
         sftp.connect(options).then(() => {
           let tasks = fileArr.map(({filename, source}) => {
             let buffer = Buffer.from(source)
-            return sftp.put(buffer, path.resolve(remotePath, filename))
+            return sftp.put(buffer, path.join(remotePath, filename).split(path.sep).join('/'))
                 .then(() => {
                   console.log(emoji.get('smiley'), chalk.green(`文件: ${filename} 已上传至服务器下${remotePath}`))
                 }).catch((err) => {
