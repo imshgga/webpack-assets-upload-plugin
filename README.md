@@ -51,3 +51,8 @@ When you use `web-dev-server`, maybe you wanner do something at everytime webpac
     ]
     ...
   ```
+### CHANGELOG
+
++ Add support for old version of webpack.
++ Add examples of webpack v2.
++ fixed windows path step

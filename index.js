@@ -16,7 +16,14 @@ class UploadPlugin {
   apply (compiler) {
     const options = this.options
 
-    compiler.hooks.done.tapAsync('uploadPlugin', function ({ compilation}, next) {
+
+    if (compiler.hooks && compiler.hooks.done && compiler.hooks.done.tapAsync) {
+      compiler.hooks.done.tapAsync('uploadPlugin', uploadTask)
+    } else if (compiler.plugin) {
+      compiler.plugin('done', uploadTask)
+    }
+
+    function uploadTask ({ compilation}, callback) {
       const filenames = Object.keys(compilation.assets)
       const fileArr = filenames.map(filename => {
         let source = compilation.assets[filename].source()
@@ -53,8 +60,9 @@ class UploadPlugin {
         })
       }
 
-      next()
-    })
+      callback && callback()
+    }
+
   }
 }
 
